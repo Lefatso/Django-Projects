@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add produts(stock)</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="item_code">Item Code </label>
+            <input type="text" name="item_code" maxlength="10" required id="item_code">
+        </div>
+    
+        <div>
+            <label for="description">Description</label>
+            <input type="description" name="description" maxlength="50" required id="description">
+        </div>
+    
+        <div>
+            <label for="unit_cost">Unit Cost</label>
+            <input type="number" name="unit_cost" maxlength="50" required id="unit_cost">
+        </div>
+    
+        <div>
+            <label for="quantity_in_stock">Quanity in Stock</label>
+            <input type="number" name="quantity_in_stock" maxlength="50" required id="quantity_in_stock">
+        </div>
+    
+    
+        <div>
+            <label for="reorder_level">Reorder Level</label>
+            <input type="number" name="reorder_level" maxlength="50" required id="reorder_level">
+        </div>
+       
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
