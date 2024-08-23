@@ -7,3 +7,5 @@ class StockItemForm(forms.ModelForm):
 
         model = StockItem
         fields = ('item_code', 'description','unit_cost','quantity_in_stock','reorder_level',)
+
+

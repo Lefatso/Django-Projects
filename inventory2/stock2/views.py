@@ -7,12 +7,12 @@ def add_stock_item(request):
         form = StockItemForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('stock_list_list')
+            return redirect('stock_items')
     else:
         form = StockItemForm()
     return render(request, 'stock2/add_stock_item.html', {'form': form})
 
-def stock_list_view(request):
+def stock_item_list(request):
     stocks = StockItem.objects.all()
-    return render(request, 'stock2/stock_item_list.html', {'stock2': stocks})
+    return render(request, 'stock2/stock_item_list.html', {'stocks': stocks})
 

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock List</title>
+
+</head>
+<body>
+    <h1>Stock List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Unit Cost</th>
+                <th>Quantity in Stock</th>
+                <th>Reorder Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.item_code }}</td>
+                <td>{{ stock.description }}</td>
+                <td>{{ stock.unit_cost }}</td>
+                <td>{{ stock.quatity_in_stock }}</td>
+                <td>{{ stock.reorder_level }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
